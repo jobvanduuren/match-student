@@ -38,5 +38,12 @@ class Match < ApplicationRecord
    end
  end
 
+ def self.create_matches2
+   original_table = Student.all
+   shuffled_table = []
+   shuffled_table[0] = original_table.shuffle
+
+ end
+
 
 end
