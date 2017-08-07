@@ -43,7 +43,22 @@ class Match < ApplicationRecord
    shuffled_table = []
    shuffled_table[0] = original_table.shuffle
 
- end
+   number_of_students = original_table.length
+
+  for i in (1..7) do
+    shuffled_table[i] = shuffled_table[i-1][0..number_of_students-2].rotate + [shuffled_table[i-1][number_of_students-1]]
+  end
+
+  shuffled_table.each_with_index do |array, index|
+
+    Match.create(student1: array[0].name, student2: array[7].name)
+    Match.create(student1: array[1].name, student2: array[6].name)
+    Match.create(student1: array[2].name, student2: array[5].name)
+    Match.create(student1: array[3].name, student2: array[4].name)
+
+  end
+
+  end
 
 
 end
