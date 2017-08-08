@@ -45,7 +45,7 @@ class Match < ApplicationRecord
 
    number_of_students = original_table.length
 
-  for i in (1..number_of_students-2) do
+  for i in (1..7) do
     shuffled_table[i] = shuffled_table[i-1][0..number_of_students-2].rotate + [shuffled_table[i-1][number_of_students-1]]
   end
 
