@@ -19175,3 +19175,4 @@ Processing by MatchesController#index as HTML
 Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.3ms)
 
 
+  [1m[36mMatch Load (105.5ms)[0m  [1m[34mSELECT  "matches".* FROM "matches" LIMIT $1[0m  [["LIMIT", 11]]
