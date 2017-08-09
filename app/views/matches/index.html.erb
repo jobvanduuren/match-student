@@ -3,7 +3,7 @@
 <% @matches.each_with_index do |match, index| %>
 <!-- <p><%= match.student1 %></p> -->
 <% if index % 4 == 0 %>
-<h2>Batch</h2>
+<h2>Day <%= match.day %></h2>
 <% end %>
 <p><%= match.student1 %> - <%= match.student2 %></p>
 <% end %>
