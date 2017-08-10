@@ -21261,3 +21261,790 @@ Processing by MatchesController#index as HTML
 Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-10 23:12:50 +0200
+  [1m[35m (21.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 879ms (Views: 852.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:12:56 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (268.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (499.0ms)
+Completed 200 OK in 589ms (Views: 104.2ms | ActiveRecord: 459.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-10 23:13:02 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-10 23:27:23 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:27:28 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (105.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (175.4ms)
+Completed 200 OK in 383ms (Views: 240.8ms | ActiveRecord: 111.2ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:29:17 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+GAfu204K7Jr3i384mrIv8jwNm7mEqOEpoBDF5qPKVus65lnM/nlal4vI8m70Xoxez8o16dEpkaKEIjtFGoW/Q==", "student"=>{"name"=>"Sam"}, "commit"=>"Create"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (111.6ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-08-10 21:29:17.755672"], ["updated_at", "2017-08-10 21:29:17.755672"]]
+  [1m[35m (82.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 199ms (ActiveRecord: 193.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:29:17 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:29:32 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-10 23:29:36 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:29:37 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 62ms (Views: 45.7ms | ActiveRecord: 4.4ms)
+
+
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:33:12 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 80ms (Views: 75.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:33:59 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/my_method" for 127.0.0.1 at 2017-08-10 23:34:05 +0200
+Processing by MatchesController#my_method as HTML
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (198.9ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 281]]
+  [1m[35m (77.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 282]]
+  [1m[35m (112.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 283]]
+  [1m[35m (110.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 284]]
+  [1m[35m (51.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 285]]
+  [1m[35m (19.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 286]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 287]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 288]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 289]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 290]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 291]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 292]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 293]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 294]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 295]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 296]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 297]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 298]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 299]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 300]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 301]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 302]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 303]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 304]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 305]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 306]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 307]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 308]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (53.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.039397"], ["updated_at", "2017-08-10 21:34:06.039397"], ["student1", "Hubert"], ["student2", "Sarah"], ["day", 1]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.113306"], ["updated_at", "2017-08-10 21:34:06.113306"], ["student1", "Tina"], ["student2", "Patrick"], ["day", 1]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.135420"], ["updated_at", "2017-08-10 21:34:06.135420"], ["student1", "Anna"], ["student2", "Paul"], ["day", 1]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.146942"], ["updated_at", "2017-08-10 21:34:06.146942"], ["student2", "Rob"], ["day", 1]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.157402"], ["updated_at", "2017-08-10 21:34:06.157402"], ["student1", "Tina"], ["student2", "Hubert"], ["day", 2]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.168492"], ["updated_at", "2017-08-10 21:34:06.168492"], ["student1", "Anna"], ["student2", "Sarah"], ["day", 2]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.180328"], ["updated_at", "2017-08-10 21:34:06.180328"], ["student2", "Patrick"], ["day", 2]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.190740"], ["updated_at", "2017-08-10 21:34:06.190740"], ["student1", "Rob"], ["student2", "Paul"], ["day", 2]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.201675"], ["updated_at", "2017-08-10 21:34:06.201675"], ["student1", "Anna"], ["student2", "Tina"], ["day", 3]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.213312"], ["updated_at", "2017-08-10 21:34:06.213312"], ["student2", "Hubert"], ["day", 3]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.224749"], ["updated_at", "2017-08-10 21:34:06.224749"], ["student1", "Rob"], ["student2", "Sarah"], ["day", 3]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.246789"], ["updated_at", "2017-08-10 21:34:06.246789"], ["student1", "Paul"], ["student2", "Patrick"], ["day", 3]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.258183"], ["updated_at", "2017-08-10 21:34:06.258183"], ["student2", "Anna"], ["day", 4]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.269611"], ["updated_at", "2017-08-10 21:34:06.269611"], ["student1", "Rob"], ["student2", "Tina"], ["day", 4]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.280409"], ["updated_at", "2017-08-10 21:34:06.280409"], ["student1", "Paul"], ["student2", "Hubert"], ["day", 4]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.291182"], ["updated_at", "2017-08-10 21:34:06.291182"], ["student1", "Patrick"], ["student2", "Sarah"], ["day", 4]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.302322"], ["updated_at", "2017-08-10 21:34:06.302322"], ["student1", "Rob"], ["day", 5]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.313336"], ["updated_at", "2017-08-10 21:34:06.313336"], ["student1", "Paul"], ["student2", "Anna"], ["day", 5]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.324914"], ["updated_at", "2017-08-10 21:34:06.324914"], ["student1", "Patrick"], ["student2", "Tina"], ["day", 5]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.335935"], ["updated_at", "2017-08-10 21:34:06.335935"], ["student1", "Sarah"], ["student2", "Hubert"], ["day", 5]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.346279"], ["updated_at", "2017-08-10 21:34:06.346279"], ["student1", "Paul"], ["student2", "Rob"], ["day", 6]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.357850"], ["updated_at", "2017-08-10 21:34:06.357850"], ["student1", "Patrick"], ["day", 6]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.369291"], ["updated_at", "2017-08-10 21:34:06.369291"], ["student1", "Sarah"], ["student2", "Anna"], ["day", 6]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.379701"], ["updated_at", "2017-08-10 21:34:06.379701"], ["student1", "Hubert"], ["student2", "Tina"], ["day", 6]]
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.413480"], ["updated_at", "2017-08-10 21:34:06.413480"], ["student1", "Patrick"], ["student2", "Paul"], ["day", 7]]
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.446657"], ["updated_at", "2017-08-10 21:34:06.446657"], ["student1", "Sarah"], ["student2", "Rob"], ["day", 7]]
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.480170"], ["updated_at", "2017-08-10 21:34:06.480170"], ["student1", "Hubert"], ["day", 7]]
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.514020"], ["updated_at", "2017-08-10 21:34:06.514020"], ["student1", "Tina"], ["student2", "Anna"], ["day", 7]]
+  [1m[35m (28.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.546850"], ["updated_at", "2017-08-10 21:34:06.546850"], ["student1", "Sarah"], ["student2", "Patrick"], ["day", 8]]
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.580959"], ["updated_at", "2017-08-10 21:34:06.580959"], ["student1", "Hubert"], ["student2", "Paul"], ["day", 8]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.602426"], ["updated_at", "2017-08-10 21:34:06.602426"], ["student1", "Tina"], ["student2", "Rob"], ["day", 8]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:06.613567"], ["updated_at", "2017-08-10 21:34:06.613567"], ["student1", "Anna"], ["day", 8]]
+  [1m[35m (30.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/matches
+Completed 302 Found in 1473ms (ActiveRecord: 1327.1ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:34:06 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.8ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:34:24 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:34:30 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nqteDbI7uckCf4lqm2iaWoetYIiBK1FhjgJEp6dswwnKINjR7Pp3ETeOh1/C0yjUNGJ+McB9VKOiko9dKYn8rw==", "student"=>{"name"=>"Billy"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:31.000055"], ["updated_at", "2017-08-10 21:34:31.000055"]]
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 33ms (ActiveRecord: 29.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:34:31 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:34:39 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/my_method" for 127.0.0.1 at 2017-08-10 23:34:44 +0200
+Processing by MatchesController#my_method as HTML
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 309]]
+  [1m[35m (194.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 310]]
+  [1m[35m (69.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 311]]
+  [1m[35m (119.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 312]]
+  [1m[35m (39.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 313]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 314]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 315]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 316]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 317]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 318]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 319]]
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 320]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 321]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 322]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 323]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 324]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 325]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 326]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 327]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 328]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 329]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 330]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 331]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 332]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 333]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 334]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 335]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 336]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 337]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 338]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 339]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 340]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.388190"], ["updated_at", "2017-08-10 21:34:45.388190"], ["student1", "Paul"], ["day", 1]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.398452"], ["updated_at", "2017-08-10 21:34:45.398452"], ["student1", "Anna"], ["student2", "Rob"], ["day", 1]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.409159"], ["updated_at", "2017-08-10 21:34:45.409159"], ["student1", "Hubert"], ["student2", "Tim"], ["day", 1]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.420297"], ["updated_at", "2017-08-10 21:34:45.420297"], ["student1", "Tina"], ["student2", "Sarah"], ["day", 1]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.431182"], ["updated_at", "2017-08-10 21:34:45.431182"], ["student1", "Anna"], ["student2", "Patrick"], ["day", 2]]
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.464952"], ["updated_at", "2017-08-10 21:34:45.464952"], ["student1", "Hubert"], ["day", 2]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.475631"], ["updated_at", "2017-08-10 21:34:45.475631"], ["student1", "Tina"], ["student2", "Rob"], ["day", 2]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.486589"], ["updated_at", "2017-08-10 21:34:45.486589"], ["student1", "Sarah"], ["student2", "Tim"], ["day", 2]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.498175"], ["updated_at", "2017-08-10 21:34:45.498175"], ["student1", "Hubert"], ["student2", "Paul"], ["day", 3]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.509169"], ["updated_at", "2017-08-10 21:34:45.509169"], ["student1", "Tina"], ["student2", "Patrick"], ["day", 3]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.519804"], ["updated_at", "2017-08-10 21:34:45.519804"], ["student1", "Sarah"], ["day", 3]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.531608"], ["updated_at", "2017-08-10 21:34:45.531608"], ["student1", "Tim"], ["student2", "Rob"], ["day", 3]]
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.565734"], ["updated_at", "2017-08-10 21:34:45.565734"], ["student1", "Tina"], ["student2", "Anna"], ["day", 4]]
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.586400"], ["updated_at", "2017-08-10 21:34:45.586400"], ["student1", "Sarah"], ["student2", "Paul"], ["day", 4]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.597304"], ["updated_at", "2017-08-10 21:34:45.597304"], ["student1", "Tim"], ["student2", "Patrick"], ["day", 4]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.608391"], ["updated_at", "2017-08-10 21:34:45.608391"], ["student1", "Rob"], ["day", 4]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.619527"], ["updated_at", "2017-08-10 21:34:45.619527"], ["student1", "Sarah"], ["student2", "Hubert"], ["day", 5]]
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.653074"], ["updated_at", "2017-08-10 21:34:45.653074"], ["student1", "Tim"], ["student2", "Anna"], ["day", 5]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.663791"], ["updated_at", "2017-08-10 21:34:45.663791"], ["student1", "Rob"], ["student2", "Paul"], ["day", 5]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.674762"], ["updated_at", "2017-08-10 21:34:45.674762"], ["student2", "Patrick"], ["day", 5]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.685687"], ["updated_at", "2017-08-10 21:34:45.685687"], ["student1", "Tim"], ["student2", "Tina"], ["day", 6]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.697168"], ["updated_at", "2017-08-10 21:34:45.697168"], ["student1", "Rob"], ["student2", "Hubert"], ["day", 6]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.709080"], ["updated_at", "2017-08-10 21:34:45.709080"], ["student2", "Anna"], ["day", 6]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.719338"], ["updated_at", "2017-08-10 21:34:45.719338"], ["student1", "Patrick"], ["student2", "Paul"], ["day", 6]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.730089"], ["updated_at", "2017-08-10 21:34:45.730089"], ["student1", "Rob"], ["student2", "Sarah"], ["day", 7]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.741564"], ["updated_at", "2017-08-10 21:34:45.741564"], ["student2", "Tina"], ["day", 7]]
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.775252"], ["updated_at", "2017-08-10 21:34:45.775252"], ["student1", "Patrick"], ["student2", "Hubert"], ["day", 7]]
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.797059"], ["updated_at", "2017-08-10 21:34:45.797059"], ["student1", "Paul"], ["student2", "Anna"], ["day", 7]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student2", "day") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.807927"], ["updated_at", "2017-08-10 21:34:45.807927"], ["student2", "Tim"], ["day", 8]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.818878"], ["updated_at", "2017-08-10 21:34:45.818878"], ["student1", "Patrick"], ["student2", "Sarah"], ["day", 8]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.830337"], ["updated_at", "2017-08-10 21:34:45.830337"], ["student1", "Paul"], ["student2", "Tina"], ["day", 8]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.841514"], ["updated_at", "2017-08-10 21:34:45.841514"], ["student1", "Anna"], ["student2", "Hubert"], ["day", 8]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.852116"], ["updated_at", "2017-08-10 21:34:45.852116"], ["student1", "Patrick"], ["student2", "Rob"], ["day", 9]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.863283"], ["updated_at", "2017-08-10 21:34:45.863283"], ["student1", "Paul"], ["student2", "Tim"], ["day", 9]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.874494"], ["updated_at", "2017-08-10 21:34:45.874494"], ["student1", "Anna"], ["student2", "Sarah"], ["day", 9]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-10 21:34:45.885604"], ["updated_at", "2017-08-10 21:34:45.885604"], ["student1", "Hubert"], ["student2", "Tina"], ["day", 9]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/matches
+Completed 302 Found in 1349ms (ActiveRecord: 1185.7ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-10 23:34:45 +0200
+Processing by MatchesController#index as HTML
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:35:11 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:48:14 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 186ms (Views: 173.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/students/2" for 127.0.0.1 at 2017-08-10 23:48:25 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1009ms (Views: 105.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/8" for 127.0.0.1 at 2017-08-10 23:48:30 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/3" for 127.0.0.1 at 2017-08-10 23:48:32 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-08-10 23:48:34 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 50.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/4" for 127.0.0.1 at 2017-08-10 23:48:37 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/6" for 127.0.0.1 at 2017-08-10 23:48:40 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/5" for 127.0.0.1 at 2017-08-10 23:48:44 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/7" for 127.0.0.1 at 2017-08-10 23:48:46 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/9" for 127.0.0.1 at 2017-08-10 23:48:49 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/10" for 127.0.0.1 at 2017-08-10 23:48:52 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-10 23:49:05 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:49:11 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29OX9vWJPh/kdqvhnQiHEe9mUegV0bRHr/s+CpotYQuPWBEqq0jwx9GHpdTEszWfXKlPUVSHsYWDa/XwFMherQ==", "student"=>{"name"=>"Jimbo"}, "commit"=>"Create"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant StudentsController::Dinosaur):
+  
+app/controllers/students_controller.rb:20:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:49:54 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29OX9vWJPh/kdqvhnQiHEe9mUegV0bRHr/s+CpotYQuPWBEqq0jwx9GHpdTEszWfXKlPUVSHsYWDa/XwFMherQ==", "student"=>{"name"=>"Jimbo"}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jimbo"], ["created_at", "2017-08-10 21:49:54.742847"], ["updated_at", "2017-08-10 21:49:54.742847"]]
+  [1m[35m (71.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students/11
+Completed 302 Found in 89ms (ActiveRecord: 76.3ms)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2017-08-10 23:49:54 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:50:06 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2017-08-10 23:50:13 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 54.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:50:21 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"424WNP0+GXjyKv0iIB41ta+wl13/xUcwb3ypD1dKEsK35ZDoo//XoMfb8xd5pYc7HH+J5L6TQvJD7GL12a8tZA==", "student"=>{"name"=>"Michael"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Michael"], ["created_at", "2017-08-10 21:50:21.503956"], ["updated_at", "2017-08-10 21:50:21.503956"]]
+  [1m[35m (91.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students/12
+Completed 302 Found in 97ms (ActiveRecord: 91.6ms)
+
+
+Started GET "/students/12" for 127.0.0.1 at 2017-08-10 23:50:21 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:50:33 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-08-10 23:52:57 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 57ms (Views: 45.7ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:53:08 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IClGkPTuwBBXY/u0TmW6MVNtUGtfUkogyFQiwpNGaMh0osBMqi8OyGKS9YEX3gi/4KJO0h4ET+LkxOk4HaNXbg==", "student"=>{"name"=>"Kabouter"}, "commit"=>"Create"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kabouter"], ["created_at", "2017-08-10 21:53:08.226528"], ["updated_at", "2017-08-10 21:53:08.226528"]]
+  [1m[35m (202.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 236ms (ActiveRecord: 203.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:53:08 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-10 23:53:17 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QyCXXZV9D6gG16IQliohK3DD1BaLp9tB6SnC/b8qes8XqxGBy7zBcDMmrCXPkZOlwwzKr8rx3oPFuQkHMc9FaQ==", "student"=>{"name"=>"Plop"}, "commit"=>"Create"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Plop"], ["created_at", "2017-08-10 21:53:17.467908"], ["updated_at", "2017-08-10 21:53:17.467908"]]
+  [1m[35m (75.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 99ms (ActiveRecord: 75.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-10 23:53:17 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
