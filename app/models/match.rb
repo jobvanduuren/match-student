@@ -51,18 +51,31 @@ class Match < ApplicationRecord
 
   counter = 0
 
+  # shuffled_table.each_with_index do |array, index|
+  #
+  #   counter += 1
+  #
+  #   Match.create(student1: array[0].name, student2: array[7].name, day: counter)
+  #   Match.create(student1: array[1].name, student2: array[6].name, day: counter)
+  #   Match.create(student1: array[2].name, student2: array[5].name, day: counter)
+  #   Match.create(student1: array[3].name, student2: array[4].name, day: counter)
+  #
+  # end
+
   shuffled_table.each_with_index do |array, index|
 
     counter += 1
 
-    Match.create(student1: array[0].name, student2: array[7].name, day: counter)
-    Match.create(student1: array[1].name, student2: array[6].name, day: counter)
-    Match.create(student1: array[2].name, student2: array[5].name, day: counter)
-    Match.create(student1: array[3].name, student2: array[4].name, day: counter)
+
+    for a in (1..(number_of_students/2))
+      Match.create(student1: array[a-1].name, student2: array[number_of_students-a].name, day: counter)
+    end
+
 
   end
 
-  end
+
+end
 
 
 end
