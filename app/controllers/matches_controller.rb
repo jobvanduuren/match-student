@@ -10,6 +10,7 @@ class MatchesController < ApplicationController
 
   def my_method
     Match.remove_matches
+    Student.remove_dummy
     Match.create_matches2
     # @matches = Match.all
     redirect_to matches_path
