@@ -1,7 +1,24 @@
 <h1>students</h1>
 
 <% @students.each do |student| %>
-<%= student.name %>
+    <% if student.name != "Dummy"%>
+    <p><%= link_to student.name, student_path(student.id) %> <%= link_to "[Delete]", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+    <% end %>
 <% end %>
 
 <%= @student_count %>
+
+<h1>Add a Student</h1>
+
+<%= form_for @student do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit "Create" %>
+<% end %>
+
+<% flash.each do |key, value| %>
+    <div ><%= value %></div>
+<% end %>

@@ -2,7 +2,7 @@
 
 <% @matches.each_with_index do |match, index| %>
 <!-- <p><%= match.student1 %></p> -->
-<% if index % 4 == 0 %>
+<% if index % (@student_count/2) == 0 %>
 <h2>Day <%= match.day %></h2>
 <% end %>
 <p><%= match.student1 %> - <%= match.student2 %></p>
@@ -10,3 +10,4 @@
 
 
 <%= link_to 'Matchup', my_method_path, class:'btn btn-default' %>
+<%= @student_count %>

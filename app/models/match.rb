@@ -39,7 +39,14 @@ class Match < ApplicationRecord
  end
 
  def self.create_matches2
+
    original_table = Student.all
+
+    if original_table.length%2 != 0
+      student_dummy = Student.create!( { name: "Dummy"} )
+      original_table = Student.all
+    end
+
    shuffled_table = []
    shuffled_table[0] = original_table.shuffle
 
@@ -51,18 +58,31 @@ class Match < ApplicationRecord
 
   counter = 0
 
+  # shuffled_table.each_with_index do |array, index|
+  #
+  #   counter += 1
+  #
+  #   Match.create(student1: array[0].name, student2: array[7].name, day: counter)
+  #   Match.create(student1: array[1].name, student2: array[6].name, day: counter)
+  #   Match.create(student1: array[2].name, student2: array[5].name, day: counter)
+  #   Match.create(student1: array[3].name, student2: array[4].name, day: counter)
+  #
+  # end
+
   shuffled_table.each_with_index do |array, index|
 
     counter += 1
 
-    Match.create(student1: array[0].name, student2: array[7].name, day: counter)
-    Match.create(student1: array[1].name, student2: array[6].name, day: counter)
-    Match.create(student1: array[2].name, student2: array[5].name, day: counter)
-    Match.create(student1: array[3].name, student2: array[4].name, day: counter)
+
+    for a in (1..(number_of_students/2))
+      Match.create(student1: array[a-1].name, student2: array[number_of_students-a].name, day: counter)
+    end
+
 
   end
 
-  end
+
+end
 
 
 end
