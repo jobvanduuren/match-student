@@ -15,14 +15,14 @@ class StudentsController < ApplicationController
   end
 
   def create
-    student_params = params.require(:student).permit(:name)
-
     @student = Student.new(student_params)
 
     if @student.save
+       Match.remove_matches
+       flash[:notice] = "Student successfully created"
        redirect_to action: "index"
     else
-       render 'new'
+      render 'new'
     end
   end
 
@@ -31,7 +31,15 @@ class StudentsController < ApplicationController
 
     @student.destroy
 
+    Match.remove_matches
+
     redirect_to students_path
+  end
+
+  private
+
+  def student_params
+    params.require(:student).permit(:name)
   end
 
 end

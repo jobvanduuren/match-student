@@ -1,5 +1,9 @@
 class Student < ApplicationRecord
 
+  validates :name, presence: true
+  validates :name, uniqueness: true
+  validates :name, length: { maximum: 15 }
+
   def self.chronological
     Student.order("name ASC")
   end
