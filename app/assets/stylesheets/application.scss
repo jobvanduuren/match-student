@@ -3,7 +3,10 @@
 
 body {
   background-color: #D7CEC7;
+  padding-top:58px;
 }
 
 @import "home";
-@import "navbar"
+@import "navbar";
+@import "matches";
+@import "footer";
