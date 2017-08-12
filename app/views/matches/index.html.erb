@@ -13,7 +13,7 @@
 <div class="panel-body">
 <% end %>
 <p><%= match.student1 %> - <%= match.student2 %></p>
-<% if index % (@student_count/2) == 3 %>
+<% if index % (@student_count/2) == (@student_count/2) - 1 %>
 </div>
 </div>
 <% end %>
@@ -22,4 +22,3 @@
 </div>
 
 <%= link_to 'Matchup', my_method_path, class:'btn btn-default' %>
-<%= @student_count %>

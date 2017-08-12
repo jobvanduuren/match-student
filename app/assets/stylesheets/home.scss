@@ -1,4 +1,12 @@
 
-.front-page {
-  background-color: #D7CEC7;
+
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: image_url('background.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.50px 0.50px 0.50px #000000;
 }
