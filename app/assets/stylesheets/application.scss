@@ -1,9 +1,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background-color: #D7CEC7;
+  padding-top:58px;
+  min-height: 100%;
+  margin-bottom: 140px;
 }
 
 @import "home";
-@import "navbar"
+@import "navbar";
+@import "matches";
+@import "footer";
+@import "students"

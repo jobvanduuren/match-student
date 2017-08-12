@@ -1,13 +1,29 @@
-<h1>students</h1>
+<h1 class="student-header">students</h1>
 
 <% @students.each do |student| %>
     <% if student.name != "Dummy"%>
-    <p><%= link_to student.name, student_path(student.id) %> <%= link_to "[Delete]", student_path(student.id), method: :delete, data: { confirm: "Are you sure?" } %></p>
+
+    <div class="container">
+      <div class="row">
+        <div class="student-con">
+
+
+        <div class="col-md-1">
+          <%= link_to student.name, student_path(student.id) %>
+        </div>
+        <div class="col-md-4">
+          <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span>"), student_path(student.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+        </div>
+
+      </div>
+
+      </div>
+    </div>
 
     <% end %>
 <% end %>
 
-<%= @student_count %>
+
 
 <h1>Add a Student</h1>
 
@@ -16,7 +32,7 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
-  <%= f.submit "Create" %>
+  <%= f.submit "Create", class: "btn btn-default" %>
 <% end %>
 
 <% flash.each do |key, value| %>

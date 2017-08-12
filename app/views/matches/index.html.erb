@@ -1,13 +1,24 @@
 <h1>Matches</h1>
 
+<div class="day-list">
+
+
 <% @matches.each_with_index do |match, index| %>
 <!-- <p><%= match.student1 %></p> -->
 <% if index % (@student_count/2) == 0 %>
-<h2>Day <%= match.day %></h2>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">Day <%= match.day %></h3>
+</div>
+<div class="panel-body">
 <% end %>
 <p><%= match.student1 %> - <%= match.student2 %></p>
+<% if index % (@student_count/2) == (@student_count/2) - 1 %>
+</div>
+</div>
+<% end %>
 <% end %>
 
+</div>
 
 <%= link_to 'Matchup', my_method_path, class:'btn btn-default' %>
-<%= @student_count %>

@@ -1,9 +1,15 @@
 <body class="front-page">
 
+<section class="jumbotron">
+  <div class="container">
+    <div class="row text-center">
+      <h1>Matchup</h1>
+      <%= link_to "Match your students", matches_path, class: "btn btn-default" %>
+      <%= link_to "Students", students_path, class: "btn btn-default" %>
+    </div>
 
-<h1>Matchup</h1>
+  </div>
 
-<%= link_to "Match your students", matches_path %>
-<%= link_to "Students", students_path %>
+</section>
 
 </body>
