@@ -1,2 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-color: #D7CEC7;
+}
+
+@import "home";
+@import "navbar"
