@@ -40009,3 +40009,633 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:56:09 +0200
+  [1m[35m (32.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  Rendered shared/_navbar.html.erb (1.3ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 1072ms (Views: 1048.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:56:15 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (99.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (95.2ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 361ms (Views: 166.5ms | ActiveRecord: 133.9ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 10:56:19 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (46.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (60.8ms)
+  Rendered shared/_navbar.html.erb (1.0ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 131ms (Views: 65.1ms | ActiveRecord: 49.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:56:23 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_navbar.html.erb (1.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (1.1ms) [cache miss]
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:56:55 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (7.2ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 81ms (Views: 77.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-08-13 10:57:03 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MAWUvUE2BA8ovmouDHpxgpCAqq3k26WLATwR3teSsVYvSfPFvHCy7izemFzYnWgnmjhymJvaZqDJQHc8T+oEQA==", "student"=>{"name"=>"aaaaaaaaaaaaaa"}, "commit"=>"Create"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStudent Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."name" = $1 LIMIT $2[0m  [["name", "aaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[35mSQL (29.7ms)[0m  [1m[32mINSERT INTO "students" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "aaaaaaaaaaaaaa"], ["created_at", "2017-08-13 08:57:03.770477"], ["updated_at", "2017-08-13 08:57:03.770477"]]
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1949]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1950]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1951]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1952]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1953]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1954]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1955]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1956]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1957]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1958]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1959]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1960]]
+  [1m[35m (9.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1961]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1962]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1963]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1964]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1965]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1966]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1967]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1968]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1969]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1970]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1971]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1972]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1973]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1974]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1975]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "matches" WHERE "matches"."id" = $1[0m  [["id", 1976]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 455ms (ActiveRecord: 316.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:57:04 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (9.0ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:57:40 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (1.1ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 1782ms (Views: 1778.7ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/students/49" for 127.0.0.1 at 2017-08-13 10:58:09 +0200
+Processing by StudentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DU2geuxXiCeTM1r7F9fDO2QvzWudDmdq+xcXj+kTe/Vm77RC3m/OgMHhlxU9DOc0mddVM+VKy30QpzwzvQjDIQ==", "id"=>"49"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = $1[0m  [["id", 49]]
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMatch Load (2.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+Redirected to http://localhost:3000/students
+Completed 302 Found in 63ms (ActiveRecord: 29.9ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:58:09 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.7ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 10:58:10 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.1ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/my_method" for 127.0.0.1 at 2017-08-13 10:58:12 +0200
+Processing by MatchesController#my_method as HTML
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (16.8ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.856780"], ["updated_at", "2017-08-13 08:58:12.856780"], ["student1", "Hubert"], ["student2", "Sarah"], ["day", 1]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.898006"], ["updated_at", "2017-08-13 08:58:12.898006"], ["student1", "Tim"], ["student2", "Patrick"], ["day", 1]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.909448"], ["updated_at", "2017-08-13 08:58:12.909448"], ["student1", "Tina"], ["student2", "Paul"], ["day", 1]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.920442"], ["updated_at", "2017-08-13 08:58:12.920442"], ["student1", "Rob"], ["student2", "Anna"], ["day", 1]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.931468"], ["updated_at", "2017-08-13 08:58:12.931468"], ["student1", "Tim"], ["student2", "Sarah"], ["day", 2]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.942171"], ["updated_at", "2017-08-13 08:58:12.942171"], ["student1", "Tina"], ["student2", "Hubert"], ["day", 2]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.953440"], ["updated_at", "2017-08-13 08:58:12.953440"], ["student1", "Rob"], ["student2", "Patrick"], ["day", 2]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.964532"], ["updated_at", "2017-08-13 08:58:12.964532"], ["student1", "Anna"], ["student2", "Paul"], ["day", 2]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.975634"], ["updated_at", "2017-08-13 08:58:12.975634"], ["student1", "Tina"], ["student2", "Sarah"], ["day", 3]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.986891"], ["updated_at", "2017-08-13 08:58:12.986891"], ["student1", "Rob"], ["student2", "Tim"], ["day", 3]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:12.997594"], ["updated_at", "2017-08-13 08:58:12.997594"], ["student1", "Anna"], ["student2", "Hubert"], ["day", 3]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.008921"], ["updated_at", "2017-08-13 08:58:13.008921"], ["student1", "Paul"], ["student2", "Patrick"], ["day", 3]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.019919"], ["updated_at", "2017-08-13 08:58:13.019919"], ["student1", "Rob"], ["student2", "Sarah"], ["day", 4]]
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.030942"], ["updated_at", "2017-08-13 08:58:13.030942"], ["student1", "Anna"], ["student2", "Tina"], ["day", 4]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.041948"], ["updated_at", "2017-08-13 08:58:13.041948"], ["student1", "Paul"], ["student2", "Tim"], ["day", 4]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.052992"], ["updated_at", "2017-08-13 08:58:13.052992"], ["student1", "Patrick"], ["student2", "Hubert"], ["day", 4]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.064188"], ["updated_at", "2017-08-13 08:58:13.064188"], ["student1", "Anna"], ["student2", "Sarah"], ["day", 5]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.075452"], ["updated_at", "2017-08-13 08:58:13.075452"], ["student1", "Paul"], ["student2", "Rob"], ["day", 5]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.087115"], ["updated_at", "2017-08-13 08:58:13.087115"], ["student1", "Patrick"], ["student2", "Tina"], ["day", 5]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.097900"], ["updated_at", "2017-08-13 08:58:13.097900"], ["student1", "Hubert"], ["student2", "Tim"], ["day", 5]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.109879"], ["updated_at", "2017-08-13 08:58:13.109879"], ["student1", "Paul"], ["student2", "Sarah"], ["day", 6]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.120198"], ["updated_at", "2017-08-13 08:58:13.120198"], ["student1", "Patrick"], ["student2", "Anna"], ["day", 6]]
+  [1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.130903"], ["updated_at", "2017-08-13 08:58:13.130903"], ["student1", "Hubert"], ["student2", "Rob"], ["day", 6]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.141951"], ["updated_at", "2017-08-13 08:58:13.141951"], ["student1", "Tim"], ["student2", "Tina"], ["day", 6]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.153485"], ["updated_at", "2017-08-13 08:58:13.153485"], ["student1", "Patrick"], ["student2", "Sarah"], ["day", 7]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.164039"], ["updated_at", "2017-08-13 08:58:13.164039"], ["student1", "Hubert"], ["student2", "Paul"], ["day", 7]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.175088"], ["updated_at", "2017-08-13 08:58:13.175088"], ["student1", "Tim"], ["student2", "Anna"], ["day", 7]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "matches" ("created_at", "updated_at", "student1", "student2", "day") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2017-08-13 08:58:13.187078"], ["updated_at", "2017-08-13 08:58:13.187078"], ["student1", "Tina"], ["student2", "Rob"], ["day", 7]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/matches
+Completed 302 Found in 344ms (ActiveRecord: 274.3ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 10:58:13 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-13 10:58:17 +0200
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:58:18 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 10:58:22 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:59:15 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 10:59:16 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 10:59:18 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 61ms (Views: 57.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 10:59:20 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:00:52 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 1296ms (Views: 1292.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:00:53 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 69ms (Views: 66.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 11:00:59 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.3ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 61ms (Views: 58.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:01:47 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 1392ms (Views: 1388.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:01:49 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 11:01:51 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (16.9ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 78ms (Views: 73.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:01:52 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (1.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 69ms (Views: 66.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 11:01:54 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (6.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 74ms (Views: 70.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 11:01:57 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 11:02:03 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (5.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:02:29 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 11:02:32 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 60ms (Views: 55.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 11:02:36 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-13 21:23:23 +0200
+  [1m[35m (51.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+  Rendered shared/_navbar.html.erb (1.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 3112ms (Views: 2980.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 21:23:38 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (174.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (129.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 669ms (Views: 200.8ms | ActiveRecord: 381.7ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:30:06 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:33:07 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (0.9ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 171ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:33:09 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 83ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:33:28 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 1908ms (Views: 1907.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:33:30 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.9ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-13 21:34:40 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 21:34:46 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (221.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (246.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 362ms (Views: 73.5ms | ActiveRecord: 227.3ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-13 21:34:53 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-13 21:34:57 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.6ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.2ms) [cache miss]
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.7ms)
+
+
