@@ -9,7 +9,7 @@ class MatchesController < ApplicationController
   def my_method
     Match.remove_matches
     Student.remove_dummy
-    Match.create_matches2
+    Match.create_matches
     redirect_to matches_path
   end
 
