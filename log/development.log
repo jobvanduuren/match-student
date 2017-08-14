@@ -44831,3 +44831,280 @@ Processing by StudentsController#index as HTML
 Completed 200 OK in 52ms (Views: 49.3ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:10:19 +0200
+  [1m[35m (39.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 1135ms (Views: 1128.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:10:32 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (121.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (30.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (190.0ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 464ms (Views: 149.9ms | ActiveRecord: 286.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:10:35 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:10:40 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:13:38 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 80ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:13:39 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (408.0ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 467ms (Views: 457.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:13:41 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.7ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-08-14 17:13:52 +0200
+Processing by PagesController#faq as HTML
+  Rendering pages/faq.html.erb within layouts/application
+  Rendered pages/faq.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:14:44 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:14:45 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:14:47 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (3.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:14:48 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-14 17:14:49 +0200
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.6ms) [cache miss]
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-14 17:14:50 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-14 17:14:51 +0200
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:14:52 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.7ms) [cache miss]
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:14:53 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.9ms)
+  Rendered shared/_navbar.html.erb (7.1ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:14:55 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (0.8ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/career" for 127.0.0.1 at 2017-08-14 17:15:00 +0200
+Processing by PagesController#career as HTML
+  Rendering pages/career.html.erb within layouts/application
+  Rendered pages/career.html.erb within layouts/application (0.3ms)
+  Rendered shared/_navbar.html.erb (1.3ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-08-14 17:15:03 +0200
+Processing by PagesController#faq as HTML
+  Rendering pages/faq.html.erb within layouts/application
+  Rendered pages/faq.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2017-08-14 17:15:05 +0200
+Processing by PagesController#blog as HTML
+  Rendering pages/blog.html.erb within layouts/application
+  Rendered pages/blog.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.5ms) [cache miss]
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/faq" for 127.0.0.1 at 2017-08-14 17:15:06 +0200
+Processing by PagesController#faq as HTML
+  Rendering pages/faq.html.erb within layouts/application
+  Rendered pages/faq.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2017-08-14 17:15:39 +0200
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-14 17:15:40 +0200
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/matches" for 127.0.0.1 at 2017-08-14 17:15:41 +0200
+Processing by MatchesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.4ms)[0m  [1m[34mSELECT "matches".* FROM "matches"[0m
+  Rendered matches/index.html.erb within layouts/application (2.7ms)
+  Rendered shared/_navbar.html.erb (0.7ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:15:47 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (5.6ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:15:48 +0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.3ms) [cache miss]
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-08-14 17:15:49 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" ORDER BY name ASC[0m
+  Rendered students/index.html.erb within layouts/application (4.4ms)
+  Rendered shared/_navbar.html.erb (0.6ms) [cache miss]
+  Rendered shared/_footer.html.erb (0.4ms) [cache miss]
+Completed 200 OK in 67ms (Views: 64.0ms | ActiveRecord: 0.7ms)
+
+
