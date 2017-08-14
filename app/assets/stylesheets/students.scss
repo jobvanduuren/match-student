@@ -2,12 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.student-container {
+  margin-left: 5px;
+}
+
 .student-header {
   padding-bottom: 10px;
 }
 
 .student-con {
-  margin-left: -12%;
   font-size: 20px;
   word-wrap: break-word;
 }
