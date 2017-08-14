@@ -18,6 +18,12 @@ h1 {
   font-family:'Noto Sans', sans-serif;
 }
 
+.btn {
+  background-color: #76323F;
+  color: white;
+  font-size: 20px;
+}
+
 @import "home";
 @import "navbar";
 @import "matches";
