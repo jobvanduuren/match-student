@@ -14,7 +14,7 @@
           <div class="row">
             <div class="student-con">
               <div class="col-md-4 student-center">
-                <%= link_to student.name, student_path(student.id) %>
+                <%= student.name %>
               </div>
               <div class="col-md-1">
                 <%= link_to raw("<span class=\"glyphicon glyphicon-trash\"></span>"), student_path(student.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
@@ -30,7 +30,7 @@
         <%= form_for @student do |f| %>
           <%= f.label :name %>
           <%= f.text_field :name %>
-          <%= f.submit "Create", class: "btn btn-default" %>
+          <%= f.submit "Add", class: "btn btn-default" %>
       <% end %>
 
       <% flash.each do |key, value| %>
