@@ -1,15 +1,12 @@
 <div class="container student-container">
 
-
   <h1>New Student</h1>
 
     <%= form_for @student do |f| %>
 
-
       <% @student.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
       <% end %>
-
 
     <%= f.label :name %>
     <%= f.text_field :name %>
