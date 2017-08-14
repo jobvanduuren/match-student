@@ -18,21 +18,19 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
 
     if @student.save
-       Match.remove_matches
-       flash[:notice] = "Student successfully created"
-       redirect_to action: "index"
+     Match.remove_matches
+     flash[:notice] = "Student successfully created"
+     redirect_to action: "index"
     else
       render 'new'
     end
+    
   end
 
   def destroy
     @student = Student.find(params[:id])
-
     @student.destroy
-
     Match.remove_matches
-
     redirect_to students_path
   end
 
