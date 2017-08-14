@@ -1,3 +1,5 @@
+
+
 .footer, .push {
   position: absolute;
   bottom: 0;
@@ -22,4 +24,21 @@
   flex-direction: row;
   justify-content: center;
   padding-right: 100px;
+}
+
+.footer-link a:link {
+  color: white;
+}
+
+.footer-link a:visited {
+  color: white;
+}
+
+.footer-link a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-link a:active {
+  color: white;
 }

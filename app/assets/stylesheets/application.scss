@@ -13,8 +13,18 @@ body {
   margin-bottom: 140px;
 }
 
+h1 {
+  padding-bottom: 10px;
+  font-family:'Noto Sans', sans-serif;
+}
+
 @import "home";
 @import "navbar";
 @import "matches";
 @import "footer";
-@import "students"
+@import "students";
+@import "about";
+@import "contact";
+@import "faq";
+@import "career";
+@import "blog";
