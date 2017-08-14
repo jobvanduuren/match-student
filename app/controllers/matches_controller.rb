@@ -1,8 +1,6 @@
 class MatchesController < ApplicationController
 
   def index
-    # Match.remove_matches
-    # Match.create_matches2
     @matches = Match.all
     @students = Student.all
     @student_count = @students.count
@@ -12,7 +10,6 @@ class MatchesController < ApplicationController
     Match.remove_matches
     Student.remove_dummy
     Match.create_matches2
-    # @matches = Match.all
     redirect_to matches_path
   end
 
